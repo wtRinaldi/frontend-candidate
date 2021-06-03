@@ -69,9 +69,16 @@ These are very low fidelity mockups and are only meant to convey the general lay
 
 #### Search (initial)
 
+![search initial](src/assets/search-initial.png)
+
+
 #### Search (with results)
 
+![search results](src/assets/search-results.png)
+
 #### Details
+
+![details](src/assets/details.png)
 
 ### Other
 

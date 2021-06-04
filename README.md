@@ -30,7 +30,7 @@ Display a link that allows the user to go back to the search page, which should 
 - Method: GET
 - URL: https://77opmzq78k.execute-api.us-east-1.amazonaws.com/prod/search
 - Parameters (one or both are required):
-    - `q`: name search term
+    - `term`: name search term
     - `color`: favorite color
 - Example response
 

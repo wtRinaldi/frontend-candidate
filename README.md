@@ -9,13 +9,13 @@
 
 ## Instructions
 
-Implement a simple application to search for people. This will involve two main screens; the search screen and the details screen. Data will be retrieved making use of an API (see details below). Basic screen structure should align with provided design mockups (see details below)
+Implement a simple application to search for people. This will involve two main screens: the search screen and the details screen. Data will be retrieved making use of an [API](#api) (see details below). Basic screen structure should align with provided [design mockups](#design-mockups) (see details below).
 
 ### Search screen
 
 Implement a form that allows the user to search for people. Add form controls to filter/search by name and by their favorite color. The name control should be a text input and the favorite color control should be a dropdown with the option values of `blue`, `red`, and `green`. Add a button to execute the search, and also allow them to search by pressing enter in the name input control.
 
-Display the search results on the page in _cards_ (see design mockups) that display the person's name. A user can click on a result card, which should take them to a details page for that person. Handle the scenario where no search results are found too.
+Display the search results on the page in _cards_ (see [design mockups](#design-mockups)) that display the person's name. A user can click on a result card, which should take them to a details page for that person. Handle the scenario where no search results are found too.
 
 ### Details screen
 
@@ -35,7 +35,7 @@ Display a link that allows the user to go back to the search page, which should 
 - Example response
 
 ```
-{ 
+{
     "matches": [
         { "id": 1, "name": "Mergatroid Q. Finkelmeyer" }
     ]
@@ -47,20 +47,19 @@ Display a link that allows the user to go back to the search page, which should 
 
 - Method: GET
 - URL: https://77opmzq78k.execute-api.us-east-1.amazonaws.com/prod/details/{id}
-- Example Response
+- Example Response (key in `quotes` is number of likes; value is quotes that have those number of likes).
 
-```
+
+```json
 {
   "id": 1,
   "name": "Mergatroid Q. Finkelmeyer",
   "favorite_color": "orange",
   "quotes": {
-    // key is number of likes. value is quotes that have those number of likes.
     "100": ["The chicken doesn't need a reason.", "When it rains, it pours."],
     "93": ["What goes up must come down.", "What goes down must come up."]
   }
 }
-
 ```
 
 ### Design mockups

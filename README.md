@@ -4,7 +4,7 @@
 
 - Clone repo
 - Run `npm install` to install dependencies
-- Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- Run `npm run start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 
 ## Instructions
@@ -54,7 +54,7 @@ Display a link that allows the user to go back to the search page, which should 
 {
   "id": 1,
   "name": "Mergatroid Q. Finkelmeyer",
-  "favorite_color": "orange",
+  "favorite_color": "red",
   "quotes": {
     "100": ["The chicken doesn't need a reason.", "When it rains, it pours."],
     "93": ["What goes up must come down.", "What goes down must come up."]

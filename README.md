@@ -28,7 +28,7 @@ Display a link that allows the user to go back to the search page, which should 
 #### Search
 
 - Method: GET
-- URL: https://77opmzq78k.execute-api.us-east-1.amazonaws.com/prod/search
+- URL: https://fe-interview.dev-api.cavo.io/search
 - Parameters (one or both are required):
     - `term`: name search term
     - `color`: favorite color
@@ -46,7 +46,7 @@ Display a link that allows the user to go back to the search page, which should 
 #### Details
 
 - Method: GET
-- URL: https://77opmzq78k.execute-api.us-east-1.amazonaws.com/prod/details/{id}
+- URL: https://fe-interview.dev-api.cavo.io/details/{id}
 - Example Response (key in `quotes` is number of likes; value is quotes that have those number of likes).
 
 

@@ -90,13 +90,13 @@ app.get('/search', (req, res) => {
   let matches = [];
   for (const [id, person] of Object.entries(data)) {
     let match = false
-    if (term !== null) {
+    if (term !== undefined) {
       if (person[0].includes(term) &&
-          ((color === null) || (person[1].includes(color))))
+          ((color === undefined) || (person[1].includes(color))))
       {
         match = true;
       }
-    } else if ((color !== null) && (person[1].includes(color))) {
+    } else if ((color !== undefined) && (person[1].includes(color))) {
       match = true;
     }
     if (match) {

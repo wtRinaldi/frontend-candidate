@@ -78,9 +78,17 @@ app.get('/search', (req, res) => {
   }
   let matches = [];
   for (const [id, person] of Object.entries(data)) {
-    if ((((term !== null && person[0].includes(term)) &&
-          (color !== null || person[1].includes(color))) ||
-         (color !== null && person[1].includes(color)))) {
+    let match = false
+    if (term !== null) {
+      if (person[0].includes(term) &&
+          ((color === null) || (person[1].includes(color))))
+      {
+        match = true;
+      }
+    } else if ((color !== null) && (person[1].includes(color))) {
+      match = true;
+    }
+    if (match) {
       matches.push({'id': id, 'name': person[0]})
     }
   }
@@ -98,7 +106,6 @@ app.get('/details/:id', (req, res) => {
     res.status(404).json({'error': 'person not found'});
     return;
   }
-  console.log(record);
   res.status(200).json({
     'id': person,
     'name': record[0],

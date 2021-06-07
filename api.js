@@ -68,12 +68,23 @@ const data = {
 const express = require('express');
 let app = express();
 
+app.use(function (req, res, next) {
+  // Website you wish to allow to connect
+  res.setHeader('Access-Control-Allow-Origin', '*');
+
+  // Request methods you wish to allow
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+
+  // Pass to next layer of middleware
+  next();
+});
+
 app.get('/search', (req, res) => {
   let term = req.query.term;
   let color = req.query.color;
   if (term === undefined && color === undefined) {
     res.status(400).json(
-      {'error': 'at leaset one of term or color is required'});
+      {'error': 'at least one parameter of term or color is required'});
     return;
   }
   let matches = [];

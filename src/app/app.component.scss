@@ -1,9 +1,11 @@
+@import './styles/colors';
+
 .toolbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #063948;
-    color: white;
+    background-color: $primary;
+    color: $white;
     font-weight: 600;
     padding: 15px 25px;
 

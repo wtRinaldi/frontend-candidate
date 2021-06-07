@@ -4,8 +4,8 @@
 
 - Clone repo
 - Run `npm install` to install dependencies
+- Run `npm run api` to start the API server (or `npm run api &` to run in background on mac or Linux)
 - Run `npm run start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
 
 ## Instructions
 
@@ -28,7 +28,7 @@ Display a link that allows the user to go back to the search page, which should 
 #### Search
 
 - Method: GET
-- URL: https://fe-interview.dev-api.cavo.io/search
+- URL: http://localhost:5000/search
 - Parameters (one or both are required):
     - `term`: name search term
     - `color`: favorite color
@@ -46,7 +46,7 @@ Display a link that allows the user to go back to the search page, which should 
 #### Details
 
 - Method: GET
-- URL: https://fe-interview.dev-api.cavo.io/details/{id}
+- URL: http://localhost:5000/details/{id}
 - Example Response (key in `quotes` is number of likes; value is quotes that have those number of likes).
 
 

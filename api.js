@@ -87,16 +87,24 @@ app.get('/search', (req, res) => {
       {'error': 'at least one parameter of term or color is required'});
     return;
   }
+  if (term !== undefined) {
+    term = term.toLowerCase();
+  }
+  if (color !== undefined) {
+    color = color.toLowerCase();
+  }
+
   let matches = [];
   for (const [id, person] of Object.entries(data)) {
     let match = false
     if (term !== undefined) {
-      if (person[0].includes(term) &&
-          ((color === undefined) || (person[1].includes(color))))
+      if (person[0].toLowerCase().includes(term) &&
+          ((color === undefined) || (person[1].toLowerCase().includes(color))))
       {
         match = true;
       }
-    } else if ((color !== undefined) && (person[1].includes(color))) {
+    } else if ((color !== undefined) &&
+               (person[1].toLowerCase().includes(color))) {
       match = true;
     }
     if (match) {

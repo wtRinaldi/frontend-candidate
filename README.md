@@ -34,7 +34,7 @@ Display a link that allows the user to go back to the search page, which should 
     - `color`: favorite color
 - Example response
 
-```
+```json
 {
     "matches": [
         { "id": 1, "name": "Mergatroid Q. Finkelmeyer" }

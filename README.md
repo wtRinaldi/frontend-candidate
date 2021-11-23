@@ -29,7 +29,7 @@ Display a link that allows the user to go back to the search page, which should 
 
 - Method: GET
 - URL: http://localhost:5000/search
-- Parameters (one or both are required):
+- Query string parameters (one or both are required):
     - `term`: name search term
     - `color`: favorite color
 - Example response

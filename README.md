@@ -85,3 +85,4 @@ These are very low fidelity mockups and are only meant to convey the general lay
 - Feel free to add whatever components, services, pipes, directives, etc. that you want
 - __*DO NOT*__ add any other npm packages to the repo
 - Unit tests are __*NOT NEEDED*__ for this project. However, write your code in such a way that is conducive to being unit tested
+# angular-assessment-rinaldi

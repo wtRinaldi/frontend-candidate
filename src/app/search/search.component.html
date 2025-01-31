@@ -1,6 +1,28 @@
-<p>
-    Implement search in this component
-</p>
-<p>
-    Implement details in the <a [routerLink]="['/details/123']">details component</a>
-</p>
+<div class="filter-container">
+    <input placeholder="Person" [(ngModel)]="search" (ngModelChange)="onSearchChange($event)" />
+    <app-color-select (colorChanged)="onValueReceived($event)" />
+    <button (click)="executeSearch()">Search</button>
+</div>
+<div>
+  <div *ngIf="people.length > 0; else noResults">
+    <div class="card-container">
+      <div *ngFor="let person of people" >
+        <a [routerLink]="['/details', person.id]">
+          <h3>{{ person.name }}</h3>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="errorMessage">
+    <h2>Error:</h2>
+    <p>{{ errorMessage }}</p>
+  </div>
+</div>
+
+
+<ng-template #noResults>
+  <h2>Sorry, no search results</h2>
+</ng-template>
+
+    
+

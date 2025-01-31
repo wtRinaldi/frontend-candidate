@@ -1,6 +1,22 @@
-<div>
-    Implement details in this component.
-</div>
 <p>
-    Implement search in the <a [routerLink]="['/']">search component</a>
+    <a [routerLink]="['/']">Back to search results</a>
 </p>
+<div>
+    <div *ngIf="person">
+        <h2>{{ person.name }}</h2>
+        <div>Favorite Color: {{ person.favorite_color }}</div>
+        <div>
+            <ul>
+              <li *ngFor="let quoteObj of transformedQuotes" >
+                <h3>"{{ quoteObj.quote }}"</h3>
+                <span>{{ quoteObj.likes }} Likes</span>
+              </li>
+            </ul>
+        </div>
+    </div>
+    <div *ngIf="errorMessage">
+      <h2>Error:</h2>
+      <p>{{ errorMessage }}</p>
+    </div>
+</div>
+

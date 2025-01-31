@@ -1,0 +1,22 @@
+.filter-container {
+    display: flex;
+    margin-bottom: 2rem;
+    input, app-color-select {
+        margin-right: 1.5rem;
+    }
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    
+    div {
+        display: flex;
+        flex: 1 1 300px;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid black;
+        min-height: 300px;
+    }
+}
